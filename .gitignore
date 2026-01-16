@@ -1,0 +1,7 @@
+.env
+data/*
+src/_pycache__/*
+__init__.py
+
+
+
