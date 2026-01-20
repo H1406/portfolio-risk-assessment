@@ -1,0 +1,103 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    PORTFOLIO RISK ASSESSMENT - RUN GUIDE                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📋 FIRST TIME SETUP (Run Once)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   ./setup_backend.sh
+
+   This will:
+   ✓ Create Python virtual environment
+   ✓ Install all Python dependencies
+   ✓ Prepare the backend for running
+
+
+🚀 RUNNING THE APPLICATION (Every Time)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You need TWO terminal windows open simultaneously:
+
+
+┌─ TERMINAL 1: Backend Server ──────────────────────────────────────────────┐
+│                                                                            │
+│   1. Activate virtual environment:                                        │
+│      source venv/bin/activate                                             │
+│                                                                            │
+│   2. Start Flask server:                                                  │
+│      cd src                                                                │
+│      python api.py                                                         │
+│                                                                            │
+│   ✓ Server will run on http://localhost:5000                             │
+│   ✓ Keep this terminal open                                              │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+
+┌─ TERMINAL 2: Frontend Server ─────────────────────────────────────────────┐
+│                                                                            │
+│   1. Navigate to frontend:                                                │
+│      cd frontend                                                           │
+│                                                                            │
+│   2. Start React dev server:                                              │
+│      npm start                                                             │
+│                                                                            │
+│   ✓ Browser will auto-open to http://localhost:3000                      │
+│   ✓ Keep this terminal open                                              │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+
+🎯 USING THE APPLICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   1. Open http://localhost:3000 in your browser
+   
+   2. Adjust the sliders to change asset weights:
+      • VN30 (Blue)
+      • Gold - XAU/USD (Yellow)
+      • Bitcoin - BTC/USD (Orange)
+   
+   3. Weights automatically normalize to 100%
+   
+   4. View updated metrics:
+      • Cumulative Return
+      • Value at Risk (95%)
+      • Mean Daily Return
+      • Volatility
+   
+   5. Watch the portfolio value chart update in real-time
+
+
+🛑 STOPPING THE SERVERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Press Ctrl+C in each terminal window
+
+
+❓ TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   Problem: Backend won't start
+   Solution: Make sure you activated the virtual environment
+             source venv/bin/activate
+
+   Problem: Frontend shows connection error
+   Solution: Make sure backend is running on port 5000
+
+   Problem: Module not found
+   Solution: Re-run setup: ./setup_backend.sh
+
+   Problem: Port already in use
+   Solution: Kill existing processes or use different ports
+
+
+📚 MORE HELP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+   • Quick Start: See QUICKSTART.md
+   • Detailed Guide: See SETUP.md
+   • Implementation Details: See IMPLEMENTATION_SUMMARY.md
+
+
+═════════════════════════════════════════════════════════════════════════════════
