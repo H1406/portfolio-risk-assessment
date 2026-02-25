@@ -77,7 +77,6 @@ const PortfolioVisualizer: React.FC = () => {
   const chartData = portfolioData?.portfolio_values.map((item, index) => ({
     date: formatDate(item.date),
     value: item.value,
-    // Only show label every N points for readability
     displayDate: index % Math.floor(portfolioData.portfolio_values.length / 10) === 0 
       ? formatDate(item.date) 
       : '',
